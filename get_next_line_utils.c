@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aissatakane <aissatakane@student.42.fr>    +#+  +:+       +#+        */
+/*   By: akane <akane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:29:01 by aissatakane       #+#    #+#             */
-/*   Updated: 2022/10/13 12:29:02 by aissatakane      ###   ########.fr       */
+/*   Updated: 2022/10/13 17:11:55 by akane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,3 @@ char	*ft_strjoin(char *s1, char *s2)
 	free(s1);
 	return (re);
 }
-

@@ -3,19 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aissatakane <aissatakane@student.42.fr>    +#+  +:+       +#+        */
+/*   By: akane <akane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:29:09 by aissatakane       #+#    #+#             */
-/*   Updated: 2022/10/13 12:29:10 by aissatakane      ###   ########.fr       */
+/*   Updated: 2022/10/13 17:14:12 by akane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-//check_nl: 
-//Checks if there is a '\n' in str
-//- returns index of '\n' if yes
-//- returns 0 if not
 int	check_nl(char *str)
 {
 	int	i;
@@ -32,8 +28,6 @@ int	check_nl(char *str)
 	return (0);
 }
 
-//get_str: 
-//As long as `\n' not found, adds buffer to str using ft_strjoin
 char	*get_str(int fd, char *str, char *buffer)
 {
 	int	len;
@@ -63,8 +57,6 @@ char	*get_str(int fd, char *str, char *buffer)
 	return (str);
 }
 
-//get_line
-//copies all characters of str to res until '\n' or the end of str if there is no '\n'
 char	*get_line(char *str)
 {
 	char	*res;
@@ -93,7 +85,6 @@ char	*get_line(char *str)
 	return (res);
 }
 
-//get_newstr
 char	*get_newstr(char *str, size_t len)
 {
 	size_t	i;
@@ -104,7 +95,6 @@ char	*get_newstr(char *str, size_t len)
 	j = ft_strlen(str);
 	if (!str || len == 0)
 		return (NULL);
-	//if str = line, there is nothing to be done (we are at the end of the file)
 	if (j == i)
 	{
 		free (str);
@@ -117,7 +107,6 @@ char	*get_newstr(char *str, size_t len)
 		return (NULL);
 	}
 	j = 0;
-	//copies remaining of str after '\n' to newstr
 	while (res && str[i])
 		res[j++] = str[i++];
 	res[j] = '\0';
