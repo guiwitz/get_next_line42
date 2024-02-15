@@ -14,3 +14,5 @@ get_line:
 get_newstr:
   Checks if string str = string line, in which case there is nothing to be done (we are at the end of the file)
   Copies remaining of string str after '\n' to newstr
+
+My change.
